@@ -66,7 +66,6 @@ while run:
     screen.fill("sky blue")
     screen.blit(bluenightsky, (0, 0))
     pygame.draw.rect(screen, "White", border)
-    pygame.draw.rect(screen,"Red",red)
     screen.blit(redship, (red.x, red.y))
     screen.blit(yellowship, (yellow.x, yellow.y))
     red_text=font.render("Health:"+str(red_health),1,"Red")
