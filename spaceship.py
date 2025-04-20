@@ -82,6 +82,7 @@ while run:
         if red.colliderect(bullet):
             red_health-=1
             yellow_bullet.remove(bullet)
+            grenade.play()
         if bullet.x<0:
             yellow_bullet.remove(bullet)
     for bullet in red_bullet:
@@ -89,18 +90,13 @@ while run:
         if bullet.x>HEIGHT:
             red_bullet.remove(bullet)
 
-    for bullet in red_bullet:
+    
         if yellow.colliderect(bullet):
                 yellow_health-=1
                 grenade.play()
                 red_bullet.remove(bullet)
 
-    for bullet in yellow_bullet:
-        if red.colliderect(bullet):
-                red_health -=1
-                grenade.play()
-                yellow_bullet.remove(bullet)
-    
+   
     if red_health<=0:
         winnertext=font.render("Yellow Wins",True,"Yellow")
         screen.blit(winnertext,(550,350))
